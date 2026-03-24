@@ -17,6 +17,11 @@
     <!-- Interactive Mouse Glow -->
     <div id="mouse-glow"></div>
 
+    <!-- Scroll Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
     <!-- Background Elements -->
     <div class="bg-gradient-1"></div>
     <div class="bg-gradient-2"></div>
@@ -49,6 +54,7 @@
         <section id="home" class="hero section">
             <div class="container hero-content">
                 <div class="hero-text fade-in-up">
+                    <span class="hero-greeting highlight">Welcome to my space.</span>
                     <h1>Hi, I'm <span class="highlight">Rohan More</span></h1>
                     <h2>I build digital experiences that are fast, accessible, and <span
                             class="gradient-text">beautiful</span>.</h2>
@@ -60,6 +66,33 @@
                             Profile</a>
                         <a href="Rohan's%20Resume.pdf" target="_blank" class="btn-secondary"
                             style="border-color: var(--accent-color);">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (What I Do) -->
+        <section id="services" class="services section">
+            <div class="container fade-in-up scroll-anim">
+                <h3 class="section-title">What I Do</h3>
+                <div class="services-grid">
+                    <div class="service-card glass-panel tilt-element">
+                        <div class="service-icon">💻</div>
+                        <h4>Full Stack Web Dev</h4>
+                        <p>Building scalable, responsive web applications using modern frameworks like React, Next.js,
+                            and Node.js.</p>
+                    </div>
+                    <div class="service-card glass-panel tilt-element">
+                        <div class="service-icon">🐍</div>
+                        <h4>Python & Automation</h4>
+                        <p>Optimizing workflows and building complex logic-driven systems with Python and automated
+                            testing tools.</p>
+                    </div>
+                    <div class="service-card glass-panel tilt-element">
+                        <div class="service-icon">🛡️</div>
+                        <h4>Cyber Security</h4>
+                        <p>Implementing secure coding practices and building intelligent detection systems to protect
+                            digital assets.</p>
                     </div>
                 </div>
             </div>
@@ -266,10 +299,45 @@
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">↑</button>
+
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Designed & Built with ❤️ for the web.</p>
+            <div class="social-links">
+                <a href="https://github.com/rohanmore221" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rohan-sambhaji-more-72497121b" target="_blank"
+                    aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:rohanmore151@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+            <p>Designed & Built with ❤️ for the web 2026.</p>
         </div>
     </footer>
 

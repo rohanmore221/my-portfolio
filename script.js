@@ -16,21 +16,47 @@ navLinksItems.forEach(link => {
     });
 });
 
-// Navbar Scroll Effect
+// Navbar Scroll Effect & Scroll Progress
 const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
+const progressBar = document.getElementById('progress-bar');
+const backToTopBtn = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     
+    // Update Navbar Appearance
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 
-    lastScroll = currentScroll;
+    // Update Scroll Progress Bar
+    if (progressBar) {
+        const progress = (currentScroll / totalHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+    }
+
+    // Update Back to Top Button Visibility
+    if (backToTopBtn) {
+        if (currentScroll > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }
 });
+
+// Back to Top functionality
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // Scroll Animations (Intersection Observer)
 const observerOptions = {
