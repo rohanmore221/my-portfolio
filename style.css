@@ -35,6 +35,20 @@ body {
     cursor: default;
 }
 
+/* Modern CSS Grid Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+    pointer-events: none;
+}
+
 /* Mouse Glow */
 #mouse-glow {
     position: fixed;
@@ -251,6 +265,53 @@ h3.section-title.center::after { left: 50%; transform: translateX(-50%); }
     transition: var(--transition);
 }
 .about-image:hover::after { top: 16px; left: 16px; border-color: var(--accent-hover); }
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.edu-header h4 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+}
+
+.edu-date {
+    font-family: var(--font-display);
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.edu-school {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.edu-grade {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-color);
+}
 
 /* Experience Section */
 .experience-container {
